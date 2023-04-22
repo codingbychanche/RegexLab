@@ -1,6 +1,9 @@
 package com.example.funwithregex;
 
+import static java.security.AccessController.getContext;
+
 import android.graphics.Color;
+import android.os.Build;
 import android.os.Bundle;
 import android.text.Layout;
 import android.text.SpannableString;
@@ -15,6 +18,8 @@ import android.widget.Toast;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.view.menu.MenuBuilder;
+import androidx.appcompat.view.menu.MenuPopupHelper;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModel;
 import androidx.lifecycle.ViewModelProvider;
@@ -84,6 +89,7 @@ public class MainActivity extends AppCompatActivity  {
             @Override
             public void onClick(View v) {
                 PopupMenu popup = new PopupMenu(getApplicationContext(), v);
+
                 MenuInflater inflater = popup.getMenuInflater();
                 inflater.inflate(R.menu.regex_input_pop_up, popup.getMenu());
                 popup.show();
@@ -91,8 +97,40 @@ public class MainActivity extends AppCompatActivity  {
                 popup.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
                     @Override
                     public boolean onMenuItemClick(MenuItem item) {
-                        mainViewModel.regexText.postValue("666");
 
+                        // Clear the current regex input
+                        if (item.getItemId()==R.id.clear)
+                            regexInputView.setText("");
+
+                        // Insert a backslash
+                        if (item.getItemId()==R.id.backslach)
+                            regexInputView.getText().insert(regexInputView.getSelectionStart(),"\\");
+
+                        // Insert ?
+                        if (item.getItemId()==R.id.can)
+                            regexInputView.getText().insert(regexInputView.getSelectionStart(),"?");
+
+                        // Insert a backslash
+                        if (item.getItemId()==R.id.or)
+                            regexInputView.getText().insert(regexInputView.getSelectionStart(),"|");
+
+                        // Insert paras. and move cursor between them...
+                        if (item.getItemId()==R.id.para) {
+                            regexInputView.getText().insert(regexInputView.getSelectionStart(), "()");
+                            regexInputView.setSelection(regexInputView.getSelectionStart()-1);
+                        }
+
+                        // Insert paras. and move cursor between them...
+                        if (item.getItemId()==R.id.curly) {
+                            regexInputView.getText().insert(regexInputView.getSelectionStart(), "{}");
+                            regexInputView.setSelection(regexInputView.getSelectionStart()-1);
+                        }
+
+                        // Insert paras. and move cursor between them...
+                        if (item.getItemId()==R.id.brackets) {
+                            regexInputView.getText().insert(regexInputView.getSelectionStart(), "[]");
+                            regexInputView.setSelection(regexInputView.getSelectionStart()-1);
+                        }
 
                         return false;
                     }
