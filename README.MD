@@ -10,3 +10,4 @@ Additionally, this App shows how to manipulate EditText's behavior, such as inse
 
 Feel free to browse through the code and get what you need :-)
 
+![Regx Sandbox App](screenshot.png)
