@@ -1,8 +1,8 @@
 <resources>
     <string name="app_name">FunWithRegex</string>
-    <string name="title_home">Home</string>
-    <string name="title_dashboard">Dashboard</string>
-    <string name="title_notifications">Notifications</string>
+    <string name="title_home">Regex Sandbox</string>
+    <string name="title_dashboard">Regex Lib</string>
+    <string name="title_notifications">Settings</string>
 
     <string name="regex_input_hint">Regex Eingabe</string>
     <string name="search_text_hint">Such Text</string>

@@ -18,7 +18,7 @@
    id="svg8"
    inkscape:version="0.92.5 (2060ec1f9f, 2020-04-08)"
    sodipodi:docname="app_icon.svg"
-   inkscape:export-filename="/media/berthold/Bertholds Zeug/NFSShare/MyCode/AndroidStudioProjects/MyApps/VoltageDivider/Icons/app_icon.png"
+   inkscape:export-filename="/home/berthold/Schreibtisch/Rastergrafik.png"
    inkscape:export-xdpi="104.86603"
    inkscape:export-ydpi="104.86603">
   <defs
@@ -247,8 +247,8 @@
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.9899495"
-     inkscape:cx="-28.880547"
-     inkscape:cy="209.16334"
+     inkscape:cx="-29.747377"
+     inkscape:cy="168.69055"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -287,23 +287,29 @@
      transform="translate(0,-161.53331)">
     <text
        xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:7.09946585px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.17748664"
-       x="77.59304"
-       y="232.89438"
+       style="font-style:normal;font-weight:normal;font-size:22.66374969px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.56659377"
+       x="67.939392"
+       y="312.63919"
        id="text119824"
-       transform="scale(1.0195731,0.98080263)"><tspan
+       transform="scale(1.0777274,0.92787842)"
+       inkscape:export-filename="/home/berthold/Schreibtisch/use152406.png"
+       inkscape:export-xdpi="104"
+       inkscape:export-ydpi="104"><tspan
          sodipodi:role="line"
          id="tspan119822"
-         x="77.59304"
-         y="232.89438"
-         style="font-size:14.19893169px;stroke-width:0.17748664">\w{1}+</tspan></text>
+         x="67.939392"
+         y="312.63919"
+         style="font-size:45.32749939px;stroke-width:0.56659377">\w</tspan></text>
     <use
        id="use152406"
-       transform="matrix(-2.3003974,0,0,2.4399406,80.9094,179.34341)"
+       transform="matrix(-3.7856559,0,0,3.8469682,132.2135,153.74083)"
        xlink:href="#emoji-1f432"
        x="0"
        y="0"
        width="100%"
-       height="100%" />
+       height="100%"
+       inkscape:export-filename="/home/berthold/Schreibtisch/use152406.png"
+       inkscape:export-xdpi="104"
+       inkscape:export-ydpi="104" />
   </g>
 </svg>
