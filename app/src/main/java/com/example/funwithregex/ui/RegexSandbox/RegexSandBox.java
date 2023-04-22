@@ -43,7 +43,11 @@ public class RegexSandBox extends Fragment {
         EditText regexInputView = view.findViewById(R.id.regex_input);
         TextInputLayout regexInputLayout = view.findViewById(R.id.regex_input_layout);
 
+        EditText resultView=view.findViewById(R.id.regex_result_text);
+
+        //
         // Start search...
+        //
         regexInputLayout.setStartIconOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -57,7 +61,7 @@ public class RegexSandBox extends Fragment {
                 regexSandBoxViewModel.regexText.setValue(regex);
 
                 regexInputLayout.setError(null);
-                regexSandBoxViewModel.runRegex();
+                regexSandBoxViewModel.runRegex(System.currentTimeMillis());
             }
         });
 
@@ -115,7 +119,7 @@ public class RegexSandBox extends Fragment {
             }
         });
 
-        //
+        ////////////////////////////////////////////////////////////////////////////////////////////
         // Observers.
         //
         regexSandBoxViewModel.getRegexText().observe(getViewLifecycleOwner(), new Observer<String>() {
@@ -139,6 +143,13 @@ public class RegexSandBox extends Fragment {
                     regexInputLayout.setError(null);
                 else
                     regexInputLayout.setError(s);
+            }
+        });
+
+        regexSandBoxViewModel.getResult().observe(getViewLifecycleOwner(), new Observer<String>() {
+            @Override
+            public void onChanged(String s) {
+                resultView.setText(s);
             }
         });
 
