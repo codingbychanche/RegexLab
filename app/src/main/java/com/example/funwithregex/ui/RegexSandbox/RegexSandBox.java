@@ -51,6 +51,7 @@ public class RegexSandBox extends Fragment {
         regexInputLayout.setStartIconOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                resultView.setText("");
                 String testText = testTextInputView.getText().toString();
                 SpannableString t = new SpannableString(testText);
                 t.setSpan(0, 0, t.length(), 0);
@@ -149,7 +150,7 @@ public class RegexSandBox extends Fragment {
         regexSandBoxViewModel.getResult().observe(getViewLifecycleOwner(), new Observer<String>() {
             @Override
             public void onChanged(String s) {
-                resultView.setText(s);
+                resultView.append(s);
             }
         });
 
